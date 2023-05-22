@@ -65,13 +65,34 @@ public class Aarray {
         print(numbersCopy3);
 
 
+        System.out.println(sum(1,1,1,1,1));
+
+
+            sum2("Welcome!", 20,10);// Welcome, 30
+            sum2("Hello World!");//Hello World! 0
+
 
     }
 
+    /**
+     * передача в качестве аргумента метода ряда чисел (не определенное количество)
+     * Троеточие перед названием параметра int ...nums указывает на то, что он будет необязательным и будет представлять массив.
+     */
+    public static int sum (int ... nums){
+        int sum = 0;
+        for (int num: nums){
+            sum +=num;
+        }
+        return sum;
+    }
 
-
-
-
+    static void sum2(String message, int ...nums){
+        System.out.println(message);
+        int result =0;
+        for(int x:nums)
+            result+=x;
+        System.out.println(result);
+    }
 
     public static void print(int[] arr) {
         System.out.println(Arrays.toString(arr));
