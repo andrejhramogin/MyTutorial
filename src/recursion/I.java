@@ -2,7 +2,7 @@ package recursion;
 
 public class I {
     public static void main(String[] args) {
-recursion(33,2);
+recursion(130,2);
     }
 
     //I: Разложение на множители
