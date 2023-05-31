@@ -7,12 +7,14 @@ import java.util.Scanner;
 
 public class Server {
     public static void main(String[] args) throws IOException {
-        ServerSocket socket = new ServerSocket(25225);
 
-        System.out.println("Server is started.");
-        while(true){
-            Socket client = socket.accept();
-            handleRequest(client);
+        try (ServerSocket socket = new ServerSocket(25225)) {
+
+            System.out.println("Server is started.");
+            while (true) {
+                Socket client = socket.accept();
+                handleRequest(client);
+            }
         }
     }
 
